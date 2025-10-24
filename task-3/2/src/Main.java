@@ -1,12 +1,17 @@
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
+
 public class Main {
     private static final int MAX_NUM = 30;
     private static final int FLOWER_TYPE_AMOUNT = 4;
-    public static void main(String[] args) {
-        //получаем случайное количество цветов
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        //РїРµСЂРµРІРѕРґРёРј РєРѕРґРёСЂРѕРІРєСѓ РЅР° windows-1251 РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЂСѓСЃСЃРєРёС… СЃРёРјРІРѕР»РѕРІ
+        System.setOut(new PrintStream(System.out, true, "Cp1251"));
+        //РїРѕР»СѓС‡Р°РµРј СЃР»СѓС‡Р°Р№РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С†РІРµС‚РѕРІ
         int flower_num = 1 + (new java.util.Random()).nextInt(MAX_NUM);
         Flower[] flowers = new Flower[flower_num];
         System.out.println(flower_num);
-        //заполняем букет цветами
+        //Р·Р°РїРѕР»РЅСЏРµРј Р±СѓРєРµС‚ С†РІРµС‚Р°РјРё
         for(int i = 0; i < flower_num; i++)
         {
             int flower_type = (new java.util.Random()).nextInt(FLOWER_TYPE_AMOUNT);
@@ -28,33 +33,33 @@ public class Main {
             }
             flowers[i] = flower;
         }
-        //смотрим что в букете и считаем стоимость
+        //СЃРјРѕС‚СЂРёРј С‡С‚Рѕ РІ Р±СѓРєРµС‚Рµ Рё СЃС‡РёС‚Р°РµРј СЃС‚РѕРёРјРѕСЃС‚СЊ
         int full_price = 0;
-        System.out.println("Цветы в букете: ");
+        System.out.println("Р¦РІРµС‚С‹ РІ Р±СѓРєРµС‚Рµ: ");
         for(int i = 0; i < flower_num; i++)
         {
             Flower flower = flowers[i];
             full_price += flower.getPrice();
             System.out.println(flower.getName() + " = " + flower.getPrice());
         }
-        System.out.println("Стоимость буквета: " + full_price);
+        System.out.println("РЎС‚РѕРёРјРѕСЃС‚СЊ Р±СѓРєРІРµС‚Р°: " + full_price);
     }
 }
-//базовый класс цветка
+//Р±Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ С†РІРµС‚РєР°
 abstract class Flower {
-    private String name = "";   //название цветка
-    private int price = 0;   //цена
+    private String name = "";   //РЅР°Р·РІР°РЅРёРµ С†РІРµС‚РєР°
+    private int price = 0;   //С†РµРЅР°
     public Flower(String name, int price)
     {
         this.name = name;
         this.price = price;
     }
-    //получить название
+    //РїРѕР»СѓС‡РёС‚СЊ РЅР°Р·РІР°РЅРёРµ
     public String getName()
     {
         return this.name;
     }
-    //получить цену
+    //РїРѕР»СѓС‡РёС‚СЊ С†РµРЅСѓ
     public int getPrice()
     {
         return this.price;
@@ -62,7 +67,7 @@ abstract class Flower {
 }
 class Rose extends Flower{
     public Rose(){
-        super("Роза", 100);
+        super("Р РѕР·Р°", 100);
     }
     public Rose(String name, int price){
         super(name, price);
@@ -70,16 +75,16 @@ class Rose extends Flower{
 }
 class BlackRose extends Rose{
     public BlackRose(){
-        super("Черная Роза", 150);
+        super("Р§РµСЂРЅР°СЏ Р РѕР·Р°", 150);
     }
 }
 class Tulip extends Flower{
     public Tulip(){
-        super("Тюльпан", 50);
+        super("РўСЋР»СЊРїР°РЅ", 50);
     }
 }
 class Sunflower extends Flower{
     public Sunflower(){
-        super("Подсолнух", 10);
+        super("РџРѕРґСЃРѕР»РЅСѓС…", 10);
     }
 }

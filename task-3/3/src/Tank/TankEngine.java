@@ -4,6 +4,6 @@ import interfaces.IProductPart;
 
 public class TankEngine implements IProductPart {
     public TankEngine() {
-        System.out.println("Создан двигатель");
+        System.out.println("РЎРѕР·РґР°РЅ РґРІРёРіР°С‚РµР»СЊ");
     }
 }

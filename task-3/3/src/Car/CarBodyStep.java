@@ -5,7 +5,7 @@ import interfaces.*;
 public class CarBodyStep implements ILineStep {
     @Override
     public IProductPart buildProductPart() {
-        System.out.println("Производство кузова");
+        System.out.println("РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ РєСѓР·РѕРІР°");
         return new CarBody();
     }
 }

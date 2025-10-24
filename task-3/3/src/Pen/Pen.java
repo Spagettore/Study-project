@@ -11,19 +11,19 @@ public class Pen implements IProduct {
     @Override
     public void installFirstPart(IProductPart part) {
         this.body = part;
-        System.out.println("Установлен корпус");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅ РєРѕСЂРїСѓСЃ");
     }
 
     @Override
     public void installSecondPart(IProductPart part) {
         this.spring = part;
-        System.out.println("Установлена пружина");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅР° РїСЂСѓР¶РёРЅР°");
     }
 
     @Override
     public void installThirdPart(IProductPart part) {
         this.rod = part;
-        System.out.println("Установлен стержень");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅ СЃС‚РµСЂР¶РµРЅСЊ");
     }
 }
 

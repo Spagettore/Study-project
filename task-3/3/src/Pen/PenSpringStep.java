@@ -6,7 +6,7 @@ import interfaces.IProductPart;
 public class PenSpringStep implements ILineStep {
     @Override
     public IProductPart buildProductPart() {
-        System.out.println("Производство пружины");
+        System.out.println("РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ РїСЂСѓР¶РёРЅС‹");
         return new PenSpring();
     }
 }

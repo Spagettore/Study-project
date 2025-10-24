@@ -18,7 +18,7 @@ public class GlassesAssemblyLine implements IAssemblyLine {
 
     @Override
     public IProduct assembleProduct(IProduct product) {
-        System.out.println("Сборка очков");
+        System.out.println("РЎР±РѕСЂРєР° РѕС‡РєРѕРІ");
 
         IProductPart body = bodyStep.buildProductPart();
         product.installFirstPart(body);
@@ -29,7 +29,7 @@ public class GlassesAssemblyLine implements IAssemblyLine {
         IProductPart frames = framesStep.buildProductPart();
         product.installThirdPart(frames);
 
-        System.out.println("Очки собраны");
+        System.out.println("РћС‡РєРё СЃРѕР±СЂР°РЅС‹");
         System.out.println();
         return product;
     }

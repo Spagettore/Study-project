@@ -6,7 +6,7 @@ import interfaces.IProductPart;
 public class TankHeadStep implements ILineStep {
     @Override
     public IProductPart buildProductPart() {
-        System.out.println("Производство башни");
+        System.out.println("РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ Р±Р°С€РЅРё");
         return new TankHead();
     }
 }

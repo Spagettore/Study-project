@@ -6,7 +6,7 @@ import interfaces.IProductPart;
 public class PenRodStep implements ILineStep {
     @Override
     public IProductPart buildProductPart() {
-        System.out.println("Производство стержня");
+        System.out.println("РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ СЃС‚РµСЂР¶РЅСЏ");
         return new PenRod();
     }
 }

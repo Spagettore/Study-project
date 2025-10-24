@@ -4,6 +4,6 @@ import interfaces.*;
 
 public class CarEngine implements IProductPart {
     public CarEngine() {
-        System.out.println("Создан двигатель");
+        System.out.println("РЎРѕР·РґР°РЅ РґРІРёРіР°С‚РµР»СЊ");
     }
 }

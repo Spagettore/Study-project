@@ -15,7 +15,7 @@ public class CarAssemblyLine implements IAssemblyLine {
 
     @Override
     public IProduct assembleProduct(IProduct product) {
-        System.out.println("Сборка машины");
+        System.out.println("РЎР±РѕСЂРєР° РјР°С€РёРЅС‹");
 
         IProductPart body = bodyStep.buildProductPart();
         product.installFirstPart(body);
@@ -26,7 +26,7 @@ public class CarAssemblyLine implements IAssemblyLine {
         IProductPart engine = engineStep.buildProductPart();
         product.installThirdPart(engine);
 
-        System.out.println("Машина собрана");
+        System.out.println("РњР°С€РёРЅР° СЃРѕР±СЂР°РЅР°");
         System.out.println();
         return product;
     }

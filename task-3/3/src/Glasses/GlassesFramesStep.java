@@ -6,7 +6,7 @@ import interfaces.IProductPart;
 public class GlassesFramesStep implements ILineStep {
     @Override
     public IProductPart buildProductPart() {
-        System.out.println("Производство дужек");
+        System.out.println("РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ РґСѓР¶РµРє");
         return new GlassesFrames();
     }
 }

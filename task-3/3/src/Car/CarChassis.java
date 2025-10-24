@@ -4,6 +4,6 @@ import interfaces.*;
 
 public class CarChassis implements IProductPart {
     public CarChassis() {
-        System.out.println("Создано шасси");
+        System.out.println("РЎРѕР·РґР°РЅРѕ С€Р°СЃСЃРё");
     }
 }

@@ -4,6 +4,6 @@ import interfaces.IProductPart;
 
 public class TankHead implements IProductPart {
     public TankHead() {
-        System.out.println("Создана башня");
+        System.out.println("РЎРѕР·РґР°РЅР° Р±Р°С€РЅСЏ");
     }
 }

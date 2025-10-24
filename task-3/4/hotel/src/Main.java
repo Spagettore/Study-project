@@ -1,5 +1,7 @@
 import hotel.*;
 
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -7,15 +9,15 @@ public class Main {
 
     private static void printRooms(Hotel hotel)
     {
-        //выводим цену комнат,статус,айди и жильцов
+        //РІС‹РІРѕРґРёРј С†РµРЅСѓ РєРѕРјРЅР°С‚,СЃС‚Р°С‚СѓСЃ,Р°Р№РґРё Рё Р¶РёР»СЊС†РѕРІ
         ArrayList<Room> rooms = hotel.getRooms();
-        System.out.println("Комнаты:");
+        System.out.println("РљРѕРјРЅР°С‚С‹:");
         for(int i = 0; i < rooms.size(); i++)
         {
             Room room = rooms.get(i);
             System.out.println(room.getId() + ":" + room.getPrice() + ":" + room.getStatus());
 
-            //выводим жильцов
+            //РІС‹РІРѕРґРёРј Р¶РёР»СЊС†РѕРІ
             ArrayList<Guest> guests = room.getGuests();
             if(guests != null) {
                 for (int j = 0; j < guests.size(); j++) {
@@ -24,7 +26,7 @@ public class Main {
             }
             else
             {
-                System.out.println("Никого нет");
+                System.out.println("РќРёРєРѕРіРѕ РЅРµС‚");
             }
             System.out.println();
         }
@@ -32,8 +34,8 @@ public class Main {
     }
     private static void printServices(Hotel hotel)
     {
-        //выводим цену услуги,название,айди
-        System.out.println("Услуги:");
+        //РІС‹РІРѕРґРёРј С†РµРЅСѓ СѓСЃР»СѓРіРё,РЅР°Р·РІР°РЅРёРµ,Р°Р№РґРё
+        System.out.println("РЈСЃР»СѓРіРё:");
         ArrayList<Service> services = hotel.getServices();
         for(int i = 0; i < services.size(); i++)
         {
@@ -43,11 +45,13 @@ public class Main {
         System.out.println();
     }
 
-    public static void main(String[] args) {
-        //создаем отель
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        //РїРµСЂРµРІРѕРґРёРј РєРѕРґРёСЂРѕРІРєСѓ РЅР° windows-1251 РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЂСѓСЃСЃРєРёС… СЃРёРјРІРѕР»РѕРІ
+        System.setOut(new PrintStream(System.out, true, "Cp1251"));
+        //СЃРѕР·РґР°РµРј РѕС‚РµР»СЊ
         Hotel hotel = new Hotel();
 
-        //добавляем комнаты
+        //РґРѕР±Р°РІР»СЏРµРј РєРѕРјРЅР°С‚С‹
         hotel.addRoom(new Room(50.0));
         hotel.addRoom(new Room(100.0));
         hotel.addRoom(new Room(150.0));
@@ -55,40 +59,40 @@ public class Main {
         hotel.addRoom(new Room(250.0));
         printRooms(hotel);
 
-        //меняем цену комнаты и статус, убираем комнату 3
+        //РјРµРЅСЏРµРј С†РµРЅСѓ РєРѕРјРЅР°С‚С‹ Рё СЃС‚Р°С‚СѓСЃ, СѓР±РёСЂР°РµРј РєРѕРјРЅР°С‚Сѓ 3
         hotel.changeRoomPrice(2, 2000.0);
         hotel.changeRoomStatus(2, RoomStatus.REPAIR);
         hotel.removeRoom(3);
         printRooms(hotel);
 
-        //добавляем услуги
-        hotel.addService(new Service("Помыть полы", 150.0));
-        hotel.addService(new Service("Убрать мусор", 100.0));
-        hotel.addService(new Service("Завтрак", 200.0));
-        hotel.addService(new Service("Обед", 300.0));
-        hotel.addService(new Service("Ужин", 300.0));
+        //РґРѕР±Р°РІР»СЏРµРј СѓСЃР»СѓРіРё
+        hotel.addService(new Service("РџРѕРјС‹С‚СЊ РїРѕР»С‹", 150.0));
+        hotel.addService(new Service("РЈР±СЂР°С‚СЊ РјСѓСЃРѕСЂ", 100.0));
+        hotel.addService(new Service("Р—Р°РІС‚СЂР°Рє", 200.0));
+        hotel.addService(new Service("РћР±РµРґ", 300.0));
+        hotel.addService(new Service("РЈР¶РёРЅ", 300.0));
         printServices(hotel);
 
-        //изменяем цену завтрака, убираем уборку мусора
+        //РёР·РјРµРЅСЏРµРј С†РµРЅСѓ Р·Р°РІС‚СЂР°РєР°, СѓР±РёСЂР°РµРј СѓР±РѕСЂРєСѓ РјСѓСЃРѕСЂР°
         hotel.changeServicePrice(2, 155.0);
         hotel.removeService(1);
         printServices(hotel);
 
-        //создаем гостей
-        Guest alex = new Guest("Алексей", "Кузнецов", "Владимирович", "521", 22);
-        Guest dmitriy = new Guest("Дмитрий", "Шевцов", "Александрович", "123", 34);
-        Guest igor = new Guest("Игорь", "Иванов", "Иванович", "421", 44);
-        Guest nadya = new Guest("Надежда", "Иванова", "Александровна", "632", 41);
+        //СЃРѕР·РґР°РµРј РіРѕСЃС‚РµР№
+        Guest alex = new Guest("РђР»РµРєСЃРµР№", "РљСѓР·РЅРµС†РѕРІ", "Р’Р»Р°РґРёРјРёСЂРѕРІРёС‡", "521", 22);
+        Guest dmitriy = new Guest("Р”РјРёС‚СЂРёР№", "РЁРµРІС†РѕРІ", "РђР»РµРєСЃР°РЅРґСЂРѕРІРёС‡", "123", 34);
+        Guest igor = new Guest("РРіРѕСЂСЊ", "РРІР°РЅРѕРІ", "РРІР°РЅРѕРІРёС‡", "421", 44);
+        Guest nadya = new Guest("РќР°РґРµР¶РґР°", "РРІР°РЅРѕРІР°", "РђР»РµРєСЃР°РЅРґСЂРѕРІРЅР°", "632", 41);
 
-        //заселяем
-        System.out.println(hotel.moveIn(0, new ArrayList<Guest>(Arrays.asList(alex))) ? "Успех" : "Провал");
-        System.out.println(hotel.moveIn(4, new ArrayList<Guest>(Arrays.asList(igor, nadya)))  ? "Успех" : "Провал");
-        System.out.println(hotel.moveIn(2, new ArrayList<Guest>(Arrays.asList(dmitriy)))  ? "Успех" : "Провал");
+        //Р·Р°СЃРµР»СЏРµРј
+        System.out.println(hotel.moveIn(0, new ArrayList<Guest>(Arrays.asList(alex))) ? "РЈСЃРїРµС…" : "РџСЂРѕРІР°Р»");
+        System.out.println(hotel.moveIn(4, new ArrayList<Guest>(Arrays.asList(igor, nadya)))  ? "РЈСЃРїРµС…" : "РџСЂРѕРІР°Р»");
+        System.out.println(hotel.moveIn(2, new ArrayList<Guest>(Arrays.asList(dmitriy)))  ? "РЈСЃРїРµС…" : "РџСЂРѕРІР°Р»");
         System.out.println();
         printRooms(hotel);
 
-        System.out.println(hotel.moveOut(0) ? "Успех" : "Провал");
-        System.out.println(hotel.moveIn(1, new ArrayList<Guest>(Arrays.asList(dmitriy))) ? "Успех" : "Провал");
+        System.out.println(hotel.moveOut(0) ? "РЈСЃРїРµС…" : "РџСЂРѕРІР°Р»");
+        System.out.println(hotel.moveIn(1, new ArrayList<Guest>(Arrays.asList(dmitriy))) ? "РЈСЃРїРµС…" : "РџСЂРѕРІР°Р»");
         System.out.println();
         printRooms(hotel);
     }

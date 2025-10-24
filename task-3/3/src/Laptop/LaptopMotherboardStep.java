@@ -6,7 +6,7 @@ import interfaces.IProductPart;
 public class LaptopMotherboardStep implements ILineStep {
     @Override
     public IProductPart buildProductPart() {
-        System.out.println("Производство материнской платы");
+        System.out.println("РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ РјР°С‚РµСЂРёРЅСЃРєРѕР№ РїР»Р°С‚С‹");
         return new LaptopMotherboard();
     }
 }

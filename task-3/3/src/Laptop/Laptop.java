@@ -11,19 +11,19 @@ public class Laptop implements IProduct {
     @Override
     public void installFirstPart(IProductPart part) {
         this.body = part;
-        System.out.println("Установлен корпус");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅ РєРѕСЂРїСѓСЃ");
     }
 
     @Override
     public void installSecondPart(IProductPart part) {
         this.motherboard = part;
-        System.out.println("Установлена материнская плата");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅР° РјР°С‚РµСЂРёРЅСЃРєР°СЏ РїР»Р°С‚Р°");
     }
 
     @Override
     public void installThirdPart(IProductPart part) {
         this.monitor = part;
-        System.out.println("Установлен монитор");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅ РјРѕРЅРёС‚РѕСЂ");
     }
 }
 

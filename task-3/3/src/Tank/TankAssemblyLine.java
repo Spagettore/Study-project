@@ -18,7 +18,7 @@ public class TankAssemblyLine implements IAssemblyLine {
 
     @Override
     public IProduct assembleProduct(IProduct product) {
-        System.out.println("Сборка танка");
+        System.out.println("РЎР±РѕСЂРєР° С‚Р°РЅРєР°");
 
         IProductPart body = bodyStep.buildProductPart();
         product.installFirstPart(body);
@@ -29,7 +29,7 @@ public class TankAssemblyLine implements IAssemblyLine {
         IProductPart engine = engineStep.buildProductPart();
         product.installThirdPart(engine);
 
-        System.out.println("Танк собран");
+        System.out.println("РўР°РЅРє СЃРѕР±СЂР°РЅ");
         System.out.println();
         return product;
     }

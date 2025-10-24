@@ -4,50 +4,50 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Hotel {
-    private ArrayList<Room> rooms = new ArrayList<Room>();              //список комнат
-    private ArrayList<Service> services = new ArrayList<Service>();     //список услуг
+    private ArrayList<Room> rooms = new ArrayList<Room>();              //СЃРїРёСЃРѕРє РєРѕРјРЅР°С‚
+    private ArrayList<Service> services = new ArrayList<Service>();     //СЃРїРёСЃРѕРє СѓСЃР»СѓРі
 
-    //добавить комнату
+    //РґРѕР±Р°РІРёС‚СЊ РєРѕРјРЅР°С‚Сѓ
     public void addRoom(Room room)
     {
         rooms.add(room);
     }
-    //убрать комнату
+    //СѓР±СЂР°С‚СЊ РєРѕРјРЅР°С‚Сѓ
     public void removeRoom(int id)
     {
         this.rooms.removeIf(r -> r.getId() == id);
     }
-    //получить список комнат
+    //РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РєРѕРјРЅР°С‚
     public ArrayList<Room> getRooms()
     {
         return this.rooms;
     }
-    //получить комнату
+    //РїРѕР»СѓС‡РёС‚СЊ РєРѕРјРЅР°С‚Сѓ
     public Room getRoom(int id)
     {
         return this.rooms.stream().filter(r -> r.getId() == id).findFirst().orElse(null);
     }
-    //добавить услугу
+    //РґРѕР±Р°РІРёС‚СЊ СѓСЃР»СѓРіСѓ
     public void addService(Service service)
     {
         this.services.add(service);
     }
-    //убрать услугу
+    //СѓР±СЂР°С‚СЊ СѓСЃР»СѓРіСѓ
     public void removeService(int id)
     {
         this.services.removeIf(s -> s.getId() == id);
     }
-    //получить список услуг
+    //РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє СѓСЃР»СѓРі
     public ArrayList<Service> getServices()
     {
         return this.services;
     }
-    //получить услугу
+    //РїРѕР»СѓС‡РёС‚СЊ СѓСЃР»СѓРіСѓ
     public Service getService(int id)
     {
         return this.services.stream().filter(s -> s.getId() == id).findFirst().orElse(null);
     }
-    //заселить жильцов
+    //Р·Р°СЃРµР»РёС‚СЊ Р¶РёР»СЊС†РѕРІ
     public boolean moveIn(int room_id, ArrayList<Guest> guests)
     {
         Room room = getRoom(room_id);
@@ -58,23 +58,23 @@ public class Hotel {
         this.getRoom(room_id).setGuests(guests);
         return true;
     }
-    //выселить жильцов
+    //РІС‹СЃРµР»РёС‚СЊ Р¶РёР»СЊС†РѕРІ
     public boolean moveOut(int room_id)
     {
         this.getRoom(room_id).removeGuests();
         return true;
     }
-    //поменять статус комнаты
+    //РїРѕРјРµРЅСЏС‚СЊ СЃС‚Р°С‚СѓСЃ РєРѕРјРЅР°С‚С‹
     public void changeRoomStatus(int id, RoomStatus status)
     {
         this.getRoom(id).setStatus(status);
     }
-    //поменять цену комнаты
+    //РїРѕРјРµРЅСЏС‚СЊ С†РµРЅСѓ РєРѕРјРЅР°С‚С‹
     public void changeRoomPrice(int id, Double price)
     {
         this.getRoom(id).setPrice(price);
     }
-    //поменять цену услуги
+    //РїРѕРјРµРЅСЏС‚СЊ С†РµРЅСѓ СѓСЃР»СѓРіРё
     public void changeServicePrice(int id, Double price)
     {
         this.getService(id).setPrice(price);

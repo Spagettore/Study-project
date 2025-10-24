@@ -3,55 +3,55 @@ package hotel;
 import java.util.ArrayList;
 
 public class Room {
-    private int id;                                 //айди
-    private RoomStatus status = RoomStatus.FREE;    //статус комнаты
-    private Double price;                           //цена
-    private ArrayList<Guest> guests;                //список жильцов
-    private static int roomCount = 0;               //общее количество комнат
+    private int id;                                 //Р°Р№РґРё
+    private RoomStatus status = RoomStatus.FREE;    //СЃС‚Р°С‚СѓСЃ РєРѕРјРЅР°С‚С‹
+    private Double price;                           //С†РµРЅР°
+    private ArrayList<Guest> guests;                //СЃРїРёСЃРѕРє Р¶РёР»СЊС†РѕРІ
+    private static int roomCount = 0;               //РѕР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚
 
-    //конструктор комнаты
+    //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРјРЅР°С‚С‹
     public Room(Double price)
     {
         this.id = roomCount++;
         this.price = price;
     }
-    //получить айди
+    //РїРѕР»СѓС‡РёС‚СЊ Р°Р№РґРё
     public int getId()
     {
         return this.id;
     }
-    //получить статус комнаты
+    //РїРѕР»СѓС‡РёС‚СЊ СЃС‚Р°С‚СѓСЃ РєРѕРјРЅР°С‚С‹
     public RoomStatus getStatus()
     {
         return this.status;
     }
-    //установить статус комнаты
+    //СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃС‚Р°С‚СѓСЃ РєРѕРјРЅР°С‚С‹
     public void setStatus(RoomStatus status)
     {
         this.status = status;
     }
-    //получить цену комнаты
+    //РїРѕР»СѓС‡РёС‚СЊ С†РµРЅСѓ РєРѕРјРЅР°С‚С‹
     public Double getPrice()
     {
         return this.price;
     }
-    //изменить цену комнаты
+    //РёР·РјРµРЅРёС‚СЊ С†РµРЅСѓ РєРѕРјРЅР°С‚С‹
     public void setPrice(Double price)
     {
         this.price = price;
     }
-    //получить список жильцов
+    //РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє Р¶РёР»СЊС†РѕРІ
     public ArrayList<Guest> getGuests()
     {
         return this.guests;
     }
-    //заселить жильцов
+    //Р·Р°СЃРµР»РёС‚СЊ Р¶РёР»СЊС†РѕРІ
     public void setGuests(ArrayList<Guest> guests)
     {
         this.guests = guests;
         this.setStatus(RoomStatus.OCCUPIED);
     }
-    //выселить жильцов
+    //РІС‹СЃРµР»РёС‚СЊ Р¶РёР»СЊС†РѕРІ
     public void removeGuests()
     {
         this.guests = null;

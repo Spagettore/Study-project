@@ -1,15 +1,15 @@
 package hotel;
 
 public class Guest {
-    //фио
+    //С„РёРѕ
     private String name;
     private String family;
     private String secondName;
 
-    private String passport;    //данные паспорта
-    private int age;            //возраст
+    private String passport;    //РґР°РЅРЅС‹Рµ РїР°СЃРїРѕСЂС‚Р°
+    private int age;            //РІРѕР·СЂР°СЃС‚
 
-    //конструктор гостя
+    //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РіРѕСЃС‚СЏ
     public Guest(String name, String family, String secondName, String passport, int age)
     {
         this.name = name;
@@ -19,17 +19,17 @@ public class Guest {
         this.passport = passport;
         this.age = age;
     }
-    //получить фио
+    //РїРѕР»СѓС‡РёС‚СЊ С„РёРѕ
     public String getFullName()
     {
         return this.family + " " + this.name + " " + this.secondName;
     }
-    //получить данные паспорта
+    //РїРѕР»СѓС‡РёС‚СЊ РґР°РЅРЅС‹Рµ РїР°СЃРїРѕСЂС‚Р°
     public String getPassport()
     {
         return this.passport;
     }
-    //получить возраст
+    //РїРѕР»СѓС‡РёС‚СЊ РІРѕР·СЂР°СЃС‚
     public int getAge()
     {
         return this.age;

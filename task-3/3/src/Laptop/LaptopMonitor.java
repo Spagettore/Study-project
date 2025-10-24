@@ -4,6 +4,6 @@ import interfaces.IProductPart;
 
 public class LaptopMonitor implements IProductPart {
     public LaptopMonitor() {
-        System.out.println("Создан монитор");
+        System.out.println("РЎРѕР·РґР°РЅ РјРѕРЅРёС‚РѕСЂ");
     }
 }

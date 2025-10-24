@@ -1,18 +1,23 @@
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
+
 public class Main {
     private static final int MIN_NUM = 100;
     private static final int MAX_NUM = 900;
-    public static void main(String[] args) {
-        //берем случайное трехзначное число, от 100 до 999 и выводим его
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        //РїРµСЂРµРІРѕРґРёРј РєРѕРґРёСЂРѕРІРєСѓ РЅР° windows-1251 РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЂСѓСЃСЃРєРёС… СЃРёРјРІРѕР»РѕРІ
+        System.setOut(new PrintStream(System.out, true, "Cp1251"));
+        //Р±РµСЂРµРј СЃР»СѓС‡Р°Р№РЅРѕРµ С‚СЂРµС…Р·РЅР°С‡РЅРѕРµ С‡РёСЃР»Рѕ, РѕС‚ 100 РґРѕ 999 Рё РІС‹РІРѕРґРёРј РµРіРѕ
         int random_num = MIN_NUM + (new java.util.Random()).nextInt(MAX_NUM);
-        System.out.println("Случайное число: " + random_num);
+        System.out.println("РЎР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ: " + random_num);
 
-        //берем цифры в числе
+        //Р±РµСЂРµРј С†РёС„СЂС‹ РІ С‡РёСЃР»Рµ
         int num3 = random_num / 100;
         int num2 = (random_num / 10) % 10;
         int num1 = random_num % 10;
 
-        //считаем сумму цифр и выводим
+        //СЃС‡РёС‚Р°РµРј СЃСѓРјРјСѓ С†РёС„СЂ Рё РІС‹РІРѕРґРёРј
         int sum = num1 + num2 + num3;
-        System.out.println("Сумма цифр: " + sum);
+        System.out.println("РЎСѓРјРјР° С†РёС„СЂ: " + sum);
     }
 }

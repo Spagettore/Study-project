@@ -18,7 +18,7 @@ public class PenAssemblyLine implements IAssemblyLine {
 
     @Override
     public IProduct assembleProduct(IProduct product) {
-        System.out.println("Сборка ручки");
+        System.out.println("РЎР±РѕСЂРєР° СЂСѓС‡РєРё");
 
         IProductPart body = bodyStep.buildProductPart();
         product.installFirstPart(body);
@@ -29,7 +29,7 @@ public class PenAssemblyLine implements IAssemblyLine {
         IProductPart rod = rodStep.buildProductPart();
         product.installThirdPart(rod);
 
-        System.out.println("Ручка собрана");
+        System.out.println("Р СѓС‡РєР° СЃРѕР±СЂР°РЅР°");
         System.out.println();
         return product;
     }

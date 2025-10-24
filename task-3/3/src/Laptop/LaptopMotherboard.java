@@ -4,6 +4,6 @@ import interfaces.IProductPart;
 
 public class LaptopMotherboard implements IProductPart {
     public LaptopMotherboard() {
-        System.out.println("Создана материнская плата");
+        System.out.println("РЎРѕР·РґР°РЅР° РјР°С‚РµСЂРёРЅСЃРєР°СЏ РїР»Р°С‚Р°");
     }
 }

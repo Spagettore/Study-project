@@ -18,7 +18,7 @@ public class LaptopAssemblyLine implements IAssemblyLine {
 
     @Override
     public IProduct assembleProduct(IProduct product) {
-        System.out.println("Сборка ноутбука");
+        System.out.println("РЎР±РѕСЂРєР° РЅРѕСѓС‚Р±СѓРєР°");
 
         IProductPart body = bodyStep.buildProductPart();
         product.installFirstPart(body);
@@ -29,7 +29,7 @@ public class LaptopAssemblyLine implements IAssemblyLine {
         IProductPart monitor = monitorStep.buildProductPart();
         product.installThirdPart(monitor);
 
-        System.out.println("Ноутбук собран");
+        System.out.println("РќРѕСѓС‚Р±СѓРє СЃРѕР±СЂР°РЅ");
         System.out.println();
         return product;
     }

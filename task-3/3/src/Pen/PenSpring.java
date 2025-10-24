@@ -4,6 +4,6 @@ import interfaces.IProductPart;
 
 public class PenSpring implements IProductPart {
     public PenSpring() {
-        System.out.println("Создана пружина");
+        System.out.println("РЎРѕР·РґР°РЅР° РїСЂСѓР¶РёРЅР°");
     }
 }

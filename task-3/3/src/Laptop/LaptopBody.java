@@ -4,6 +4,6 @@ import interfaces.IProductPart;
 
 public class LaptopBody implements IProductPart {
     public LaptopBody() {
-        System.out.println("Создан корпус");
+        System.out.println("РЎРѕР·РґР°РЅ РєРѕСЂРїСѓСЃ");
     }
 }

@@ -1,40 +1,40 @@
 package hotel;
 
 public class Service {
-    private int id;                         //айди
-    private String name;                    //название услуги
-    private Double price;                   //цена услуги
-    private static int serviceCount = 0;    //общее количество услуг
+    private int id;                         //Р°Р№РґРё
+    private String name;                    //РЅР°Р·РІР°РЅРёРµ СѓСЃР»СѓРіРё
+    private Double price;                   //С†РµРЅР° СѓСЃР»СѓРіРё
+    private static int serviceCount = 0;    //РѕР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СѓСЃР»СѓРі
 
-    //конструктор услуги
+    //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СѓСЃР»СѓРіРё
     public Service(String name, Double price)
     {
-        //получение уникального айди для услуги
+        //РїРѕР»СѓС‡РµРЅРёРµ СѓРЅРёРєР°Р»СЊРЅРѕРіРѕ Р°Р№РґРё РґР»СЏ СѓСЃР»СѓРіРё
         this.id = serviceCount++;
         this.name = name;
         this.price = price;
     }
-    //получить айди
+    //РїРѕР»СѓС‡РёС‚СЊ Р°Р№РґРё
     public int getId()
     {
         return this.id;
     }
-    //получить название услуги
+    //РїРѕР»СѓС‡РёС‚СЊ РЅР°Р·РІР°РЅРёРµ СѓСЃР»СѓРіРё
     public String getName()
     {
         return this.name;
     }
-    //изменить название услуги
+    //РёР·РјРµРЅРёС‚СЊ РЅР°Р·РІР°РЅРёРµ СѓСЃР»СѓРіРё
     public void setName(String name)
     {
         this.name = name;
     }
-    //получить цену услуги
+    //РїРѕР»СѓС‡РёС‚СЊ С†РµРЅСѓ СѓСЃР»СѓРіРё
     public Double getPrice()
     {
         return this.price;
     }
-    //изменить цену услуги
+    //РёР·РјРµРЅРёС‚СЊ С†РµРЅСѓ СѓСЃР»СѓРіРё
     public void setPrice(Double price)
     {
         this.price = price;

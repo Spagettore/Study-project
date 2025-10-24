@@ -11,19 +11,19 @@ public class Glasses implements IProduct {
     @Override
     public void installFirstPart(IProductPart part) {
         this.body = part;
-        System.out.println("Установлен корпус");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅ РєРѕСЂРїСѓСЃ");
     }
 
     @Override
     public void installSecondPart(IProductPart part) {
         this.lenses = part;
-        System.out.println("Установлены линзы");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅС‹ Р»РёРЅР·С‹");
     }
 
     @Override
     public void installThirdPart(IProductPart part) {
         this.frames = part;
-        System.out.println("Установлены дужки");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅС‹ РґСѓР¶РєРё");
     }
 }
 

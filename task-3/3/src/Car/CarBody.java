@@ -4,6 +4,6 @@ import interfaces.*;
 
 public class CarBody implements IProductPart {
     public CarBody() {
-        System.out.println("Создан кузов");
+        System.out.println("РЎРѕР·РґР°РЅ РєСѓР·РѕРІ");
     }
 }

@@ -11,19 +11,19 @@ public class Tank implements IProduct {
     @Override
     public void installFirstPart(IProductPart part) {
         this.body = part;
-        System.out.println("Установлен корпус");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅ РєРѕСЂРїСѓСЃ");
     }
 
     @Override
     public void installSecondPart(IProductPart part) {
         this.head = part;
-        System.out.println("Установлена башня");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅР° Р±Р°С€РЅСЏ");
     }
 
     @Override
     public void installThirdPart(IProductPart part) {
         this.engine = part;
-        System.out.println("Установлен двигатель");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅ РґРІРёРіР°С‚РµР»СЊ");
     }
 }
 

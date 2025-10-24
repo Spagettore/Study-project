@@ -6,7 +6,7 @@ import interfaces.IProductPart;
 public class LaptopMonitorStep implements ILineStep {
     @Override
     public IProductPart buildProductPart() {
-        System.out.println("Производство монитора");
+        System.out.println("РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ РјРѕРЅРёС‚РѕСЂР°");
         return new LaptopMonitor();
     }
 }

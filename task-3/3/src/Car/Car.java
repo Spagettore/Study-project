@@ -10,19 +10,19 @@ public class Car implements IProduct {
     @Override
     public void installFirstPart(IProductPart part) {
         this.body = part;
-        System.out.println("Установлен кузов");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅ РєСѓР·РѕРІ");
     }
 
     @Override
     public void installSecondPart(IProductPart part) {
         this.chassis = part;
-        System.out.println("Установлено шасси");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅРѕ С€Р°СЃСЃРё");
     }
 
     @Override
     public void installThirdPart(IProductPart part) {
         this.engine = part;
-        System.out.println("Установлен двигатель");
+        System.out.println("РЈСЃС‚Р°РЅРѕРІР»РµРЅ РґРІРёРіР°С‚РµР»СЊ");
     }
 }
 
