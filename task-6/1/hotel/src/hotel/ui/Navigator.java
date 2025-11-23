@@ -4,17 +4,20 @@ import hotel.ui.exceptions.MenuItemNotFoundException;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Navigator {
+public class Navigator implements INavigator {
     private Menu currentMenu;
 
+    @Override
     public int getCurrentMenuItemsCount() {
         return this.currentMenu.getMenuItemsCount();
     }
 
+    @Override
     public void changeCurrentMenu(Menu menu) {
         this.currentMenu = menu;
     }
 
+    @Override
     public String getMenuHint() {
         StringBuilder hint = new StringBuilder();
         hint.append(String.format("=%s=\n", this.currentMenu.getName()));
@@ -24,6 +27,7 @@ public class Navigator {
         return hint.toString();
     }
 
+    @Override
     public void navigate(int index) {
         if (index < 0 || index > this.currentMenu.getMenuItems().size()) {
             System.out.println("Неверно введен index");

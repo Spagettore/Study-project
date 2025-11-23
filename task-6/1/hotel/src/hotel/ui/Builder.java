@@ -13,13 +13,15 @@ import hotel.ui.actions.services.*;
 
 import java.util.ArrayList;
 
-public class Builder {
+public class Builder implements IBuilder {
     private Menu rootMenu;
 
+    @Override
     public Menu getRootMenu() {
         return this.rootMenu;
     }
 
+    @Override
     public void buildMenu() {
         ArrayList<MenuItem> rootMenuItemList = new ArrayList<>();
         ArrayList<MenuItem> roomsMenuItemList = new ArrayList<>();

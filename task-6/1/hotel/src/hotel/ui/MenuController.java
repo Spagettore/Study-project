@@ -2,20 +2,20 @@ package hotel.ui;
 
 public class MenuController {
     private static MenuController instance;
-    private final Builder builder;
-    private final Navigator navigator;
+    private final IBuilder builder;
+    private final INavigator navigator;
 
-    public MenuController() {
-        this.builder = new Builder();
+    private MenuController(IBuilder builder, INavigator navigator) {
+        this.builder = builder;
         this.builder.buildMenu();
 
-        this.navigator = new Navigator();
+        this.navigator = navigator;
         this.navigator.changeCurrentMenu(this.builder.getRootMenu());
     }
 
-    public static MenuController getInstance() {
+    public static synchronized MenuController getInstance() {
         if (instance == null) {
-            instance = new MenuController();
+            instance = new MenuController(new Builder(), new Navigator());
         }
         return instance;
     }
