@@ -29,3 +29,5 @@ replay_pid*
 *.MF
 
 SavedData/
+*.prop
+*.dat
